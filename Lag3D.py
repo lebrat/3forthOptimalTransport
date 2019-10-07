@@ -42,10 +42,10 @@ class LaguerreTri():
         edges=self.__Tri.getadjEdge(i)
         if dim==3 :
             for e in edges :
-                ax.plot([e[0],e[3]],[e[1],e[4]],[e[2],e[5]])
+                ax.plot([e[0],e[3]],[e[1],e[4]],[e[2],e[5]],c='#959595')
         else :
             for e in edges :
-                ax.plot([e[0],e[3]],[e[1],e[4]])
+                ax.plot([e[0],e[3]],[e[1],e[4]],c='#959595')
     def plotList(self,l,i,dim=3) :
         edges=self.__Tri.getadjEdge(i)
         if dim==3 :

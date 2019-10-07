@@ -28,4 +28,12 @@ ot3D_module = Extension('_ot3D', libraries=['CGAL','gmp','mpfr'],
 							    sources=['polyline.cxx','ot3D.cxx','LaguerreCell3D.cxx','optim.cxx','ot3D.i'],
 								include_dirs = [numpy_include],swig_opts=['-c++'])
 
-setup(name='ot3D', ext_modules=[ot3D_module], py_modules=["ot3D"])
+setup(	name='ot3D',
+		version='1.0',
+		author_email='leo.lebrat@gmail.com',
+		license='MIT',
+		install_requires=[
+				'matplotlib>=2.2.2',			
+		],
+ 		ext_modules=[ot3D_module],
+ 		py_modules=["ot3D"])

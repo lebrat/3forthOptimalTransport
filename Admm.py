@@ -35,21 +35,21 @@ class admm() :
 	def gA(self,x) : 
 		y=np.zeros(self.shape_y)
 		for (ind,A,g) in zip(self.indices_y,self.Alist,self.gamma) :
-			for i in xrange(self.shape_y[1]) :
+			for i in range(self.shape_y[1]) :
 				y[ind[0]:ind[1],i]=g*A.dot(x[:,i])
 		return y	
 		
 	def gAT(self,y) : 
 		x=np.zeros(self.shape_x)
 		for (ind,AT,g) in zip(self.indices_y,self.ATlist,self.gamma) :
-			for i in xrange(self.shape_x[1]) :			
+			for i in range(self.shape_x[1]) :			
 				x[:,i]+=g*AT.dot(y[ind[0]:ind[1],i])
 		return x
 		
 	def solveM(self,z,b) :
 		x=np.zeros(self.shape_x)
 		mu=None if b is None else np.zeros(b.shape) 
-		for i in xrange(self.shape_x[1]) :
+		for i in range(self.shape_x[1]) :
 			if self.solver=='factorize':			
 				tmp=self.M_factorized(z[:,i]) if b is None else self.M_factorized(np.concatenate((z[:,i],b[:,i])))
 			elif self.solver=='spsolve' :
@@ -161,7 +161,7 @@ def proj_inf_inf(x,g,bnd) :
 def proj_inf_2(x,g,bnd) :
 	norm=np.linalg.norm(x,axis=1)+1e-16
 	I= norm>g*bnd+1e-16
-	for i in xrange(x.shape[1]):
+	for i in range(x.shape[1]):
 		x[I,i] = x[I,i]/norm[I]*g*bnd
 	return x
 def proj_2_2(x,g,bnd) :
