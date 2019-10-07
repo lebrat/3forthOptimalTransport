@@ -1,6 +1,6 @@
 # 3/4 discrete optimal transport
 
-This codes are the implementation of the following [paper](https://arxiv.org/abs/1806.09537). It allows to compute the exact *L²*  optimal transport between a **polyline** (union of line segments) and a **point cloud**. This toolbox allows the calculation in **2D** and **3D**. We provide hands-on tutorials on the [wiki](https://github.com/lebrat/3forthOptimalTransport/wiki/3-4-discrete-OT-wiki)
+This codes are the implementation of the following [paper](https://arxiv.org/abs/1806.09537). It allows to compute the exact *L²*  optimal transport between a **polyline** (union of line segments) and a **point cloud**. This toolbox allows the calculation in **2D** and **3D**. We provide hands-on tutorials on the [wiki](https://github.com/lebrat/3forthOptimalTransport/wiki)
 
 The codes are released for Linux platforms (tested for *Mint 18 Cinnamon 64-bit* and *Ubuntu 19.04 Disco Dingo*). 
 
